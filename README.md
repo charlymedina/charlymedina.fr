@@ -27,4 +27,4 @@ Le site utilise une pile technique moderne et légère :
 Le projet est organisé autour d'un unique fichier HTML principal :
 *   `index.html` : La page unique du site contenant l'ensemble du contenu.
 *   `CNAME` : Fichier de configuration nécessaire pour le domaine personnalisé.
-*   `/img` : Dossier contenant les images, avatars et icônes du projet.
+*   `/images` : Dossier contenant les images, avatars et icônes du projet.
