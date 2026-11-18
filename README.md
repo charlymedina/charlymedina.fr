@@ -1,30 +1,41 @@
-# 👨‍💻 charlymedina.fr - Site Personnel
+# 👨‍💻 charlymedina.fr
 
-Ce dépôt contient le code source de mon site web personnel, accessible à l'adresse [charlymedina.fr](https://charlymedina.fr/).
+Code source de mon site personnel, en ligne sur **[charlymedina.fr](https://charlymedina.fr)**.
 
-Il s'agit d'un site web **statique** qui sert de hub central pour mon profil professionnel et fournit des liens directs vers mes différents réseaux sociaux.
-
----
-
-## Fonctionnalités Clés
-
-*   **Liens Sociaux** : Des icônes pointant vers mes profils professionnels (LinkedIn, Strava, Instagram, etc.).
+Une page de présentation unique : photo, nom, ville (Tours) et liens vers mes réseaux.
 
 ---
 
-## Documentation Technique & Architecture
+## 🔗 Contenu
 
-### Architecture Statique
-Le site est conçu de manière **statique** (un simple fichier HTML), assurant une performance optimale, une sécurité accrue et un hébergement ultra-rapide. Il est déployé de manière automatisée via **GitHub Pages**.
+Liens vers mes profils :
+[LinkedIn](https://www.linkedin.com/in/charlymedina/) ·
+[Strava](https://www.strava.com/athletes/charlymedina) ·
+[Instagram](https://www.instagram.com/charlymedina.fr/) ·
+[Facebook](https://www.facebook.com/charlymedina.fr/) ·
+[X / Twitter](https://twitter.com/charlymedina_fr)
 
-### Front-End & Design
-Le site utilise une pile technique moderne et légère :
-*   **Tailwind CSS** : Utilisé via CDN comme framework utilitaire pour un design responsive, épuré et cohérent, sans nécessiter de fichiers CSS complexes.
-*   **FontAwesome** : Utilisé pour une gestion simple et performante de l'ensemble des icônes du site.
-*   **Polices** : La police de caractères **Outfit** est utilisée pour une identité visuelle claire.
+## 🛠️ Technique
 
-### Structure des Fichiers
-Le projet est organisé autour d'un unique fichier HTML principal :
-*   `index.html` : La page unique du site contenant l'ensemble du contenu.
-*   `CNAME` : Fichier de configuration nécessaire pour le domaine personnalisé.
-*   `/images` : Dossier contenant les images, avatars et icônes du projet.
+- **Site statique** : un seul fichier `index.html`, sans build.
+- **Thème** : [Identity](https://html5up.net/identity) de HTML5 UP (licence CCA 3.0).
+- **Icônes** : Font Awesome 5, hébergé dans le dépôt (`assets/webfonts`).
+- **Police** : Source Sans Pro (Google Fonts).
+- **Statistiques** : Google Analytics (gtag.js).
+- **Hébergement** : GitHub Pages, avec le domaine personnalisé défini dans `CNAME`.
+
+## 📁 Structure
+
+```
+├── index.html          # La page du site
+├── assets/css/         # Styles du thème (main.css, noscript.css, Font Awesome)
+├── assets/webfonts/    # Polices d'icônes Font Awesome
+├── images/             # avatar.jpg, bg.jpg (fond)
+├── favicon*, android-chrome-*, apple-touch-icon.png, site.webmanifest
+└── CNAME               # Domaine : charlymedina.fr
+```
+
+## ✏️ Modifier le site
+
+1. Modifier `index.html` (textes, liens) ou remplacer les images dans `images/`.
+2. Commit + push sur `main` : GitHub Pages republie le site en une minute environ.
