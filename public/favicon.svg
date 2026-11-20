@@ -1,15 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <clipPath id="r"><rect width="64" height="64" rx="14"/></clipPath>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3f8fd0"/><stop offset="1" stop-color="#9fd0ec"/>
+    <linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f86e0"/><stop offset="1" stop-color="#8cc8f4"/>
+    </linearGradient>
+    <linearGradient id="lac" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22b892"/><stop offset="1" stop-color="#0f7d68"/>
     </linearGradient>
   </defs>
   <g clip-path="url(#r)">
-    <rect width="64" height="64" fill="url(#sky)"/>
-    <path d="M0 38 14 22l10 8 12-16 16 16 12-6v40H0z" fill="#3b5a73"/>
-    <rect y="36" width="64" height="28" fill="#d6b56a"/>
-    <ellipse cx="32" cy="50" rx="24" ry="8" fill="#1f9e9a"/>
-    <ellipse cx="32" cy="50" rx="14" ry="4" fill="#136d73"/>
+    <rect width="64" height="64" fill="url(#ciel)"/>
+    <path d="M14 40 28 15h8l6 7 10 18z" fill="#c9cfcf"/>
+    <path d="M28 15h8l6 7-9-3-6 7-5 1z" fill="#eef1f0"/>
+    <path d="M0 42 6 28l4 9 5-12 5 12 4-8 4 9 4-10 4 10 4-9 4 8 5-12 5 12 4-9 6 14v6H0z" fill="#1d4a34"/>
+    <rect y="44" width="64" height="20" fill="url(#lac)"/>
+    <rect y="43" width="64" height="2" fill="#7fd36a"/>
   </g>
 </svg>

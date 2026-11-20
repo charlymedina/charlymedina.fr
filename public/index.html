@@ -6,7 +6,7 @@
   <title>Charly MEDINA</title>
   <meta name="description" content="Charly Medina, Tours (France). Retrouvez-moi sur Instagram, Strava, GitHub et LinkedIn.">
   <meta name="author" content="Charly Medina">
-  <meta name="theme-color" content="#0f5e63">
+  <meta name="theme-color" content="#14402f">
   <link rel="canonical" href="https://charlymedina.fr/">
 
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://charlymedina.fr/images/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Vue aérienne d'un lac turquoise au milieu d'un plateau doré, montagnes en arrière-plan">
+  <meta property="og:image:alt" content="Lac vert émeraude au pied d'une forêt de sapins et d'un sommet rocheux, sous un ciel bleu">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -28,13 +28,14 @@
 
   <style>
     :root {
-      --turquoise: #1f9e9a;
-      --lagon: #7fd6cf;
-      --profond: #0c3f45;
-      --dore: #e2c27a;
+      --emeraude: #1fb08f;
+      --lagon: #8fe6cb;
+      --sapin: #2f6b4c;
+      --ciel: #6db8f2;
+      --profond: #0b2e24;
       --texte: #ffffff;
       --texte-doux: rgba(255, 255, 255, .78);
-      --verre: rgba(12, 52, 60, .32);
+      --verre: rgba(12, 46, 38, .32);
       --bord: rgba(255, 255, 255, .28);
     }
     *, *::before, *::after { box-sizing: border-box; }
@@ -42,45 +43,45 @@
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--texte);
-      background-color: #4f7d8c;
+      background-color: #3d8a74;
       background-image: url("/images/lac.jpg");
       background-image: image-set(url("/images/lac.webp") type("image/webp"), url("/images/lac.jpg") type("image/jpeg"));
       background-size: cover;
-      background-position: center 25%;
+      background-position: 60% 60%;
       background-attachment: fixed;
       display: grid;
       place-items: center;
       min-height: 100svh;
       padding: 16px;
     }
-    /* Voile léger pour la lisibilité, plus marqué en bas (plateau doré) */
+    /* Voile léger pour la lisibilité, plus marqué en bas (lac) */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: linear-gradient(180deg, rgba(10, 40, 60, .10) 0%, rgba(10, 40, 50, .05) 45%, rgba(12, 40, 40, .35) 100%);
+      background: linear-gradient(180deg, rgba(10, 40, 70, .10) 0%, rgba(10, 40, 40, .05) 45%, rgba(6, 40, 32, .35) 100%);
       pointer-events: none;
     }
     main {
       position: relative;
-      width: min(100%, 380px);
-      padding: 40px 28px 30px;
+      width: min(100%, 440px);
+      padding: 46px 32px 34px;
       text-align: center;
       border-radius: 28px;
       background: var(--verre);
       border: 1px solid var(--bord);
       -webkit-backdrop-filter: blur(18px) saturate(140%);
       backdrop-filter: blur(18px) saturate(140%);
-      box-shadow: 0 24px 60px rgba(4, 30, 36, .35), inset 0 1px 0 rgba(255, 255, 255, .25);
+      box-shadow: 0 24px 60px rgba(4, 30, 24, .35), inset 0 1px 0 rgba(255, 255, 255, .25);
     }
     .avatar {
       display: block;
-      width: 124px;
-      height: 124px;
-      margin: 0 auto 20px;
+      width: 144px;
+      height: 144px;
+      margin: 0 auto 22px;
       padding: 4px;
       border-radius: 50%;
-      background: conic-gradient(from 200deg, var(--lagon), var(--turquoise), var(--dore), var(--lagon));
+      background: conic-gradient(from 200deg, var(--lagon), var(--emeraude), var(--sapin), var(--ciel), var(--lagon));
     }
     .avatar img {
       display: block;
@@ -88,18 +89,18 @@
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid rgba(12, 52, 60, .6);
+      border: 3px solid rgba(11, 46, 36, .6);
     }
     h1 {
       margin: 0;
-      font-size: 1.9rem;
+      font-size: 2.2rem;
       font-weight: 700;
       letter-spacing: .01em;
       text-shadow: 0 2px 12px rgba(0, 0, 0, .25);
     }
     .lieu {
-      margin: 8px 0 0;
-      font-size: .95rem;
+      margin: 9px 0 0;
+      font-size: 1.05rem;
       color: var(--texte-doux);
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -107,25 +108,25 @@
     .lieu::before {
       content: "";
       display: block;
-      width: 40px;
+      width: 46px;
       height: 2px;
-      margin: 0 auto 12px;
+      margin: 0 auto 14px;
       border-radius: 2px;
-      background: linear-gradient(90deg, var(--lagon), var(--dore));
+      background: linear-gradient(90deg, var(--lagon), var(--ciel));
     }
     ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 14px;
-      margin: 28px 0 0;
+      gap: 16px;
+      margin: 32px 0 0;
       padding: 0;
     }
     a {
       display: grid;
       place-items: center;
-      width: 52px;
-      height: 52px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       color: var(--texte);
       background: rgba(255, 255, 255, .12);
@@ -134,16 +135,26 @@
     }
     a:hover, a:focus-visible {
       transform: translateY(-3px);
-      background: var(--dore);
-      border-color: var(--dore);
+      background: var(--lagon);
+      border-color: var(--lagon);
       color: var(--profond);
     }
     a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-    svg { width: 22px; height: 22px; }
-    @media (max-width: 380px) {
-      main { padding: 32px 20px 26px; }
-      ul { gap: 10px; }
-      a { width: 48px; height: 48px; }
+    svg { width: 25px; height: 25px; }
+    @media (max-width: 400px) {
+      main { padding: 38px 22px 30px; }
+      .avatar { width: 136px; height: 136px; }
+      h1 { font-size: 2.05rem; }
+      ul { gap: 12px; }
+      a { width: 56px; height: 56px; }
+    }
+    /* Écrans larges : photo calée en bas et carte un peu plus basse pour dégager le sommet */
+    @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
+      body { background-position: 60% 100%; padding-top: calc(16px + 16vh); }
+    }
+    /* Mobile portrait : photo zoomée calée en bas, carte sous le sommet, lac visible en dessous */
+    @media (max-width: 600px) and (orientation: portrait) {
+      body { background-size: auto 120%; background-position: 60% 100%; align-items: start; padding-top: max(16px, 34svh); }
     }
     @media (hover: none) { body { background-attachment: scroll; } }
     @media (prefers-reduced-motion: reduce) { a { transition: none; } a:hover { transform: none; } }
