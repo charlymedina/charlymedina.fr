@@ -44,10 +44,11 @@
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--texte);
       background-color: #3d8a74;
+      /* Photo recadrée (ciel réduit) et calée en haut : le sommet reste entier sur tous les écrans */
       background-image: url("/images/lac.jpg");
       background-image: image-set(url("/images/lac.webp") type("image/webp"), url("/images/lac.jpg") type("image/jpeg"));
-      background-size: max(100vw, 180vh) auto;
-      background-position: 60% 100%;
+      background-size: cover;
+      background-position: 60% 0;
       background-attachment: fixed;
       display: grid;
       place-items: center;
@@ -148,10 +149,23 @@
       ul { gap: 12px; }
       a { width: 56px; height: 56px; }
     }
-    /* Carte centrée : la photo (4:3) fait au moins 135 % (140 % en portrait) de la hauteur d'écran et est calée en bas,
-       le sommet se retrouve ainsi au-dessus de la carte quel que soit l'écran */
-    @media (orientation: portrait) {
-      body { background-size: auto 140%; }
+    /* Écrans peu hauts (portables) : carte horizontale, deux fois moins haute, pour ne pas masquer le sommet */
+    @media (orientation: landscape) and (max-height: 820px) and (min-width: 600px) {
+      main {
+        width: auto;
+        padding: 28px 44px 28px 34px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 30px;
+        align-items: center;
+        text-align: left;
+      }
+      .avatar { grid-row: 1 / 4; width: 132px; height: 132px; margin: 0; }
+      h1 { font-size: 2rem; }
+      .lieu::before { margin: 0 0 12px; }
+      ul { justify-content: flex-start; gap: 12px; margin-top: 18px; }
+      a { width: 52px; height: 52px; }
+      svg { width: 22px; height: 22px; }
     }
     @media (hover: none) { body { background-attachment: scroll; } }
     @media (prefers-reduced-motion: reduce) { a { transition: none; } a:hover { transform: none; } }
