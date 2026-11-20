@@ -9,33 +9,30 @@ Une page de présentation unique : photo, nom, ville (Tours) et liens vers mes r
 ## 🔗 Contenu
 
 Liens vers mes profils :
-[LinkedIn](https://www.linkedin.com/in/charlymedina/) ·
-[Strava](https://www.strava.com/athletes/charlymedina) ·
 [Instagram](https://www.instagram.com/charlymedina.fr/) ·
-[Facebook](https://www.facebook.com/charlymedina.fr/) ·
-[X / Twitter](https://twitter.com/charlymedina_fr)
+[Strava](https://www.strava.com/athletes/charlymedina) ·
+[GitHub](https://github.com/charlymedina) ·
+[LinkedIn](https://www.linkedin.com/in/charlymedina/)
 
 ## 🛠️ Technique
 
-- **Site statique** : un seul fichier `index.html`, sans build.
-- **Thème** : [Identity](https://html5up.net/identity) de HTML5 UP (licence CCA 3.0).
-- **Icônes** : Font Awesome 5, hébergé dans le dépôt (`assets/webfonts`).
-- **Police** : Source Sans Pro (Google Fonts).
-- **Statistiques** : Google Analytics (gtag.js).
-- **Hébergement** : GitHub Pages, avec le domaine personnalisé défini dans `CNAME`.
+- **Site statique** : un seul `index.html` avec CSS intégré, sans JavaScript ni build.
+- **Images** : WebP, sans métadonnées EXIF/GPS.
+- **Hébergement** : Cloudflare Pages (projet `charlymedina`).
+- **Statistiques** : Cloudflare Web Analytics (sans cookie).
+- **Déploiement** : GitHub Action (`.github/workflows/deploy.yml`) à chaque push sur `main`.
 
 ## 📁 Structure
 
 ```
-├── index.html          # La page du site
-├── assets/css/         # Styles du thème (main.css, noscript.css, Font Awesome)
-├── assets/webfonts/    # Polices d'icônes Font Awesome
-├── images/             # avatar.jpg, bg.jpg (fond)
-├── favicon*, android-chrome-*, apple-touch-icon.png, site.webmanifest
-└── CNAME               # Domaine : charlymedina.fr
+├── public/                    # Contenu publié
+│   ├── index.html             # La page du site
+│   ├── images/                # lac (fond), profil, og.jpg (aperçu de partage)
+│   └── favicon.*, apple-touch-icon.png, android-chrome-*, site.webmanifest
+└── .github/workflows/deploy.yml
 ```
 
 ## ✏️ Modifier le site
 
-1. Modifier `index.html` (textes, liens) ou remplacer les images dans `images/`.
-2. Commit + push sur `main` : GitHub Pages republie le site en une minute environ.
+1. Modifier `public/index.html` ou remplacer les images dans `public/images/`.
+2. Commit + push sur `main` : l'action GitHub republie le site sur Cloudflare en une minute environ.
