@@ -47,7 +47,7 @@
       background-image: url("/images/lac.jpg");
       background-image: image-set(url("/images/lac.webp") type("image/webp"), url("/images/lac.jpg") type("image/jpeg"));
       background-size: cover;
-      background-position: 60% 60%;
+      background-position: 60% 0;
       background-attachment: fixed;
       display: grid;
       place-items: center;
@@ -148,13 +148,12 @@
       ul { gap: 12px; }
       a { width: 56px; height: 56px; }
     }
-    /* Écrans larges : photo calée en bas et carte un peu plus basse pour dégager le sommet */
+    /* Photo toujours calée en haut (sommet entier, recadrage par le bas) ; carte posée en bas pour dégager la montagne */
     @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
-      body { background-position: 60% 100%; padding-top: calc(16px + 16vh); }
+      body { background-position: 60% 90%; align-items: end; padding-bottom: 5vh; }
     }
-    /* Mobile portrait : photo zoomée calée en bas, carte sous le sommet, lac visible en dessous */
     @media (max-width: 600px) and (orientation: portrait) {
-      body { background-size: auto 120%; background-position: 60% 100%; align-items: start; padding-top: max(16px, 34svh); }
+      body { align-items: end; padding-bottom: max(16px, 3svh); }
     }
     @media (hover: none) { body { background-attachment: scroll; } }
     @media (prefers-reduced-motion: reduce) { a { transition: none; } a:hover { transform: none; } }
