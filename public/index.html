@@ -46,8 +46,8 @@
       background-color: #3d8a74;
       background-image: url("/images/lac.jpg");
       background-image: image-set(url("/images/lac.webp") type("image/webp"), url("/images/lac.jpg") type("image/jpeg"));
-      background-size: cover;
-      background-position: 60% 0;
+      background-size: max(100vw, 180vh) auto;
+      background-position: 60% 100%;
       background-attachment: fixed;
       display: grid;
       place-items: center;
@@ -148,12 +148,10 @@
       ul { gap: 12px; }
       a { width: 56px; height: 56px; }
     }
-    /* Photo toujours calée en haut (sommet entier, recadrage par le bas) ; carte posée en bas pour dégager la montagne */
-    @media (min-width: 900px) and (min-aspect-ratio: 4/3) {
-      body { background-position: 60% 90%; align-items: end; padding-bottom: 5vh; }
-    }
-    @media (max-width: 600px) and (orientation: portrait) {
-      body { align-items: end; padding-bottom: max(16px, 3svh); }
+    /* Carte centrée : la photo (4:3) fait au moins 135 % (140 % en portrait) de la hauteur d'écran et est calée en bas,
+       le sommet se retrouve ainsi au-dessus de la carte quel que soit l'écran */
+    @media (orientation: portrait) {
+      body { background-size: auto 140%; }
     }
     @media (hover: none) { body { background-attachment: scroll; } }
     @media (prefers-reduced-motion: reduce) { a { transition: none; } a:hover { transform: none; } }
